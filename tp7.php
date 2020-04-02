@@ -70,7 +70,7 @@ $s=new Square();
 $c=new Circle();
 $tab=array($s,$c);
 
-for($i=0;$i<count($tab);$i++){ // fonctione existente qui calcule la longueur d'un tableau ou d'une chaine de caractère, renvoie un int
+for($i=0;$i<count($tab);$i++){ // fonction existente qui calcule la longueur d'un tableau ou d'une chaine de caractère, renvoie un int
     echo get_class($tab[$i]); // fonction existente qui renvoie un string
     echo " Area : ";
     echo $tab[$i]->getArea();
@@ -96,7 +96,7 @@ Trait Deux{
 }
 class Text{
     use Un,Deux{
-        Un::small insteadof Deux;
+        Un::small insteadof Deux;//force l'utilisation de small de Un et bloque small de Deux
                                 // affiche small de un
         Deux::big insteadof Un;// affiche big de Deux
         Deux::big as gros; // as remplace le nom de la fonction
